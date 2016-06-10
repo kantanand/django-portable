@@ -87,17 +87,11 @@ if "DB_HOST_NAME" in database_host:
 
 DATABASES = {
     "default": {
-        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
         "ENGINE": "django.contrib.gis.db.backends.mysql",
-        # DB name or path to database file if using sqlite3.
-        "NAME": "datacenter",
-        # Not used with sqlite3.
-        "USER": "dbadmin",
-        # Not used with sqlite3.
-        "PASSWORD": "dbadmin@123#",
-        # Set to empty string for localhost. Not used with sqlite3.
+        "NAME": "data_center",
+        "USER": "db_admin",
+        "PASSWORD": "db_admin@123#",
         "HOST": database_host,
-        # Set to empty string for default. Not used with sqlite3.
         "PORT": "3306",
     }
 }
