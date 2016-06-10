@@ -30,14 +30,21 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+DEFAULT_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
+    'django.contrib.staticfiles',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
 )
+
+LOCAL_APPS = (
+    'datacenter',
+)
+
+INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
